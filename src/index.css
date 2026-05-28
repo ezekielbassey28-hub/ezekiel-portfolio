@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Scroll Reveal Animation */
+  .reveal { 
+    opacity: 0; 
+    transform: translateY(30px); 
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); 
+  }
+  .reveal.active { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+  
+  /* Glassmorphism Navbar */
+  .glass-nav { 
+    background: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(12px); 
+    border-bottom: 1px solid rgba(228, 228, 231, 0.8); 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+  }
+  
+  /* Subtle Grid Background */
+  .bg-grid { 
+    background-image: radial-gradient(#e4e4e7 1px, transparent 1px); 
+    background-size: 32px 32px; 
+  }
+  
+  /* Portfolio Image Gradients */
+  .gradient-1 { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); }
+  .gradient-2 { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+  .gradient-3 { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
+  .gradient-4 { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+  .gradient-5 { background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%); }
+  .gradient-6 { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
