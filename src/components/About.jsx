@@ -69,7 +69,7 @@ const About = () => {
                 <i className="fas fa-bolt"></i>
               </div>
               {/* Added responsive text sizing (text-2xl to text-3xl) */}
-              <h4 className="font-heading text-2xl md:text-3xl font-bold text-dark mb-1 truncate">Seamless</h4>
+              <h4 className="font-heading text-2xl md:text-3xl font-bold text-dark mb-1 truncate">Unified</h4>
               <p className="text-xs md:text-sm font-medium text-zinc-500">UI/UX Integration</p>
             </motion.div>
             
