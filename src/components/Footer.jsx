@@ -51,8 +51,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>&copy; 2026 Your Name. All rights reserved.</p>
-          <p className="mt-4 md:mt-0">Designed with <i className="fas fa-heart text-rose-500 mx-1"></i> for impact.</p>
+          <p>&copy; 2026 Ezekiel Bassey. All rights reserved.</p>
         </div>
       </div>
     </footer>
