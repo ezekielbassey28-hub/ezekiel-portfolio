@@ -27,7 +27,9 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <h4 className="text-primary font-bold tracking-wide uppercase text-sm mb-2">About Me</h4>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">Your Dedicated Full-Stack Developer</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">
+              Your Dedicated <span className="whitespace-nowrap">Full-Stack</span> Developer
+            </h2>
             <p className="text-zinc-600 mb-6 leading-relaxed">
               I am <span className="font-bold text-dark">Ezekiel Bassey</span>, a passionate full-stack web developer dedicated to creating exceptional digital experiences. With a focus on building secure, custom architecture from the ground up, I understand what it takes to build a successful online presence.
             </p>
@@ -57,7 +59,6 @@ const About = () => {
             
             <motion.div variants={cardVariants} className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4">
-                {/* Updated Icon for Experience */}
                 <i className="fas fa-laptop-code"></i>
               </div>
               <h4 className="font-heading text-3xl font-bold text-dark mb-1">3+</h4>
@@ -68,8 +69,7 @@ const About = () => {
               <div className="w-12 h-12 bg-amber-50 text-amber-500 rounded-xl flex items-center justify-center text-xl mb-4">
                 <i className="fas fa-bolt"></i>
               </div>
-              {/* Added responsive text sizing (text-2xl to text-3xl) */}
-              <h4 className="font-heading text-2xl md:text-3xl font-bold text-dark mb-1 truncate">Unified</h4>
+              <h4 className="font-heading text-2xl md:text-3xl font-bold text-dark mb-1 truncate">Fluid</h4>
               <p className="text-xs md:text-sm font-medium text-zinc-500">UI/UX Integration</p>
             </motion.div>
             
@@ -77,7 +77,6 @@ const About = () => {
               <div className="w-12 h-12 bg-rose-50 text-rose-500 rounded-xl flex items-center justify-center text-xl mb-4">
                 <i className="fas fa-star"></i>
               </div>
-              {/* Added responsive text sizing (text-2xl to text-3xl) */}
               <h4 className="font-heading text-2xl md:text-3xl font-bold text-dark mb-1">Robust</h4>
               <p className="text-xs md:text-sm font-medium text-zinc-500">Backend System</p>
             </motion.div>
