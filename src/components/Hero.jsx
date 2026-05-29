@@ -49,7 +49,7 @@ const Hero = () => {
             <a href="mailto:ezekielbassey28@gmail.com" className="px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primaryHover transition-all text-center shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
               <i className="fas fa-envelope"></i> Email
             </a>
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:border-white/30 hover:bg-white/10 transition-all text-center backdrop-blur-sm flex items-center justify-center gap-2">
+            <a href="https://wa.me/+2349066789052" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:border-white/30 hover:bg-white/10 transition-all text-center backdrop-blur-sm flex items-center justify-center gap-2">
               <i className="fab fa-whatsapp text-green-400"></i> WhatsApp
             </a>
           </motion.div>
