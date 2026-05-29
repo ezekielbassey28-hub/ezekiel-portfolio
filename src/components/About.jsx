@@ -51,7 +51,7 @@ const About = () => {
               <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center text-xl mb-4">
                 <i className="fas fa-users"></i>
               </div>
-              <h4 className="font-heading text-3xl font-bold text-dark mb-1">150+</h4>
+              <h4 className="font-heading text-3xl font-bold text-dark mb-1">50+</h4>
               <p className="text-sm font-medium text-zinc-500">Happy Clients</p>
             </motion.div>
             
