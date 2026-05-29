@@ -1,18 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-// Parent container variant for staggering
 const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15 // Time between each card popping up
+      staggerChildren: 0.15 
     }
   }
 };
 
-// Individual card variant
+
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.3, duration: 0.8 } }
@@ -41,7 +40,7 @@ const Services = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-100px" }} // Triggers slightly before it enters screen
+          viewport={{ once: true, margin: "-100px" }} 
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <motion.div variants={cardVariants} className="bg-white p-8 rounded-2xl border border-zinc-100 shadow-sm hover:-translate-y-2 hover:shadow-xl hover:shadow-zinc-200/50 transition-all duration-300 group">
