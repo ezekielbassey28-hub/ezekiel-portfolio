@@ -37,7 +37,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-zinc-400 font-medium">WhatsApp</p>
-                  <a href="https://wa.me/+2349066789052" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:text-green-400 transition-colors">+1 (234) 567-890</a>
+                  <a href="https://wa.me/+2349066789052" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:text-green-400 transition-colors">09066789052</a>
                 </div>
               </div>
             </div>
