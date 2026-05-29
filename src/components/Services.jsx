@@ -33,7 +33,7 @@ const Services = () => {
         >
           <h4 className="text-primary font-bold tracking-wide uppercase text-sm mb-2">My Services</h4>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">Engineering & Architecture</h2>
-          <p className="text-zinc-500 text-lg">I build secure, custom web applications and high-performance interfaces from the ground up, delivering end-to-end solutions designed to solve complex technical challenges.</p>
+          <p className="text-zinc-500 text-lg">I build secure, custom web applications and high-performance interfaces from the ground up, delivering end-to-end solutions designed to solve your specific business problems.</p>
         </motion.div>
 
         {/* The Grid controls the staggering of the cards */}
