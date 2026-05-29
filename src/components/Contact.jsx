@@ -18,7 +18,7 @@ const Contact = () => {
           >
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Ready to Start Your Project?</h2>
             <p className="text-zinc-400 text-lg mb-10 leading-relaxed max-w-lg">
-              Get in touch with me to discuss your web design and development needs. I'm here to help you turn your vision into reality.
+             Get in touch to discuss your custom infrastructure and full-stack development needs. Let's architect a secure, high-performance solution for your business.
             </p>
             
             <div className="space-y-6">
