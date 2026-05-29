@@ -49,7 +49,7 @@ const Services = () => {
               <i className="fas fa-globe"></i>
             </div>
             <h3 className="font-heading text-xl font-bold text-dark mb-3">Web Development</h3>
-            <p className="text-zinc-500 text-sm leading-relaxed">Custom, responsive websites built with modern technologies to meet your specific business requirements.</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">Custom, responsive websites built with modern technologies, tailored to how your business actually operates.</p>
           </motion.div>
 
           <motion.div variants={cardVariants} className="bg-white p-8 rounded-2xl border border-zinc-100 shadow-sm hover:-translate-y-2 hover:shadow-xl hover:shadow-zinc-200/50 transition-all duration-300 group">
@@ -57,7 +57,7 @@ const Services = () => {
               <i className="fas fa-shopping-cart"></i>
             </div>
             <h3 className="font-heading text-xl font-bold text-dark mb-3">E-commerce Solutions</h3>
-            <p className="text-zinc-500 text-sm leading-relaxed">Powerful, secure online stores designed to perfectly showcase your products and drive massive conversions.</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">Powerful, secure online stores designed to showcase your products and turn visitors into paying customers.</p>
           </motion.div>
 
           <motion.div variants={cardVariants} className="bg-white p-8 rounded-2xl border border-zinc-100 shadow-sm hover:-translate-y-2 hover:shadow-xl hover:shadow-zinc-200/50 transition-all duration-300 group">
@@ -65,7 +65,7 @@ const Services = () => {
               <i className="fas fa-search"></i>
             </div>
             <h3 className="font-heading text-xl font-bold text-dark mb-3">SEO Optimization</h3>
-            <p className="text-zinc-500 text-sm leading-relaxed">Get your website to the top of search results and increase organic traffic with my proven, data-driven SEO strategies.</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">Get your website in front of the right people and grow your organic traffic with strategies built around your specific goals.</p>
           </motion.div>
 
           <motion.div variants={cardVariants} className="bg-white p-8 rounded-2xl border border-zinc-100 shadow-sm hover:-translate-y-2 hover:shadow-xl hover:shadow-zinc-200/50 transition-all duration-300 group">
@@ -73,7 +73,7 @@ const Services = () => {
               <i className="fas fa-mobile-alt"></i>
             </div>
             <h3 className="font-heading text-xl font-bold text-dark mb-3">Mobile App Development</h3>
-            <p className="text-zinc-500 text-sm leading-relaxed">Native and cross-platform mobile applications that deeply engage your users on both iOS and Android.</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">Native and cross-platform mobile applications built for iOS and Android that keep your users coming back.</p>
           </motion.div>
 
           <motion.div variants={cardVariants} className="bg-white p-8 rounded-2xl border border-zinc-100 shadow-sm hover:-translate-y-2 hover:shadow-xl hover:shadow-zinc-200/50 transition-all duration-300 group">
@@ -81,7 +81,7 @@ const Services = () => {
               <i className="fas fa-server"></i>
             </div>
             <h3 className="font-heading text-xl font-bold text-dark mb-3">API & Backend</h3>
-            <p className="text-zinc-500 text-sm leading-relaxed">Robust server-side architecture and custom API development to ensure your apps run smoothly and securely.</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">Robust server-side architecture and custom API development so your apps run fast, stay secure, and scale when you need them to.</p>
           </motion.div>
 
           <motion.div variants={cardVariants} className="bg-white p-8 rounded-2xl border border-zinc-100 shadow-sm hover:-translate-y-2 hover:shadow-xl hover:shadow-zinc-200/50 transition-all duration-300 group">
@@ -89,7 +89,8 @@ const Services = () => {
               <i className="fas fa-paint-brush"></i>
             </div>
             <h3 className="font-heading text-xl font-bold text-dark mb-3">UI/UX Design</h3>
-            <p className="text-zinc-500 text-sm leading-relaxed">Comprehensive visual branding solutions and user-centered design systems that make your business truly stand out.</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">
+             Clean, user-centered design systems and visual branding that make your business look as good as it performs.</p>
           </motion.div>
         </motion.div>
       </div>
