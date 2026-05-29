@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Contact = () => {
   const [result, setResult] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending message...");
+    setIsSubmitting(true);
+    setResult("");
+    
     const formData = new FormData(event.target);
 
     // Your private Web3Forms Access Key
@@ -21,13 +25,21 @@ const Contact = () => {
       const data = await response.json();
 
       if (data.success) {
-        setResult("Message sent successfully! I will be in touch soon.");
-        event.target.reset();
+        setIsSubmitting(false);
+        setIsModalOpen(true); // Trigger the satisfying pop-up
+        event.target.reset(); // Clear the form
+        
+        // Optional: Auto-close the modal after 5 seconds
+        setTimeout(() => {
+          setIsModalOpen(false);
+        }, 5000);
       } else {
+        setIsSubmitting(false);
         console.log("Error", data);
         setResult(data.message);
       }
     } catch (error) {
+      setIsSubmitting(false);
       console.error("Submission failed:", error);
       setResult("Error submitting form. Please try again.");
     }
@@ -35,6 +47,41 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-24 bg-dark relative overflow-hidden">
+      
+      {/* Satisfying Success Pop-up */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md"
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0, y: 30 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.8, opacity: 0, y: 30 }}
+              transition={{ type: "spring", bounce: 0.5, duration: 0.6 }}
+              className="bg-white/10 backdrop-blur-2xl border border-white/20 p-8 md:p-10 rounded-3xl shadow-2xl max-w-sm w-full text-center relative"
+            >
+              <div className="w-20 h-20 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 border border-emerald-500/30 shadow-[0_0_30px_rgba(16,185,129,0.3)]">
+                <i className="fas fa-check"></i>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">Transmission Successful</h3>
+              <p className="text-zinc-400 mb-8 leading-relaxed">
+                Thank you for reaching out. I have received your project details and will be in touch shortly to discuss the architecture.
+              </p>
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="w-full py-4 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-semibold rounded-xl transition-all"
+              >
+                Close Window
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full filter blur-[120px] opacity-20 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-rose-600 rounded-full filter blur-[120px] opacity-20 pointer-events-none"></div>
 
@@ -100,13 +147,24 @@ const Contact = () => {
                 <label className="text-sm font-medium text-zinc-300">Message</label>
                 <textarea name="message" required rows="4" className="w-full bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none" placeholder="Tell me about your project..."></textarea>
               </div>
-              <button type="submit" className="w-full py-4 bg-primary text-white font-bold rounded-xl hover:bg-primaryHover transition-colors shadow-lg shadow-primary/30">
-                Send Message
-              </button>
               
-              {/* Form Status Message */}
-              {result && (
-                <p className="text-center text-sm font-medium text-emerald-400 mt-4">
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="w-full py-4 bg-primary text-white font-bold rounded-xl hover:bg-primaryHover transition-colors shadow-lg shadow-primary/30 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {isSubmitting ? (
+                  <>
+                    <i className="fas fa-spinner fa-spin"></i> Transmitting...
+                  </>
+                ) : (
+                  "Send Message"
+                )}
+              </button>
+
+              {/* Error Message Display */}
+              {result && !isModalOpen && (
+                <p className="text-center text-sm font-medium text-rose-400 mt-4">
                   {result}
                 </p>
               )}
