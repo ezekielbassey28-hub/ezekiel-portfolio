@@ -47,36 +47,39 @@ const About = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="grid grid-cols-2 gap-4"
           >
-            <motion.div variants={cardVariants} className="bg-white p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
+            <motion.div variants={cardVariants} className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center text-xl mb-4">
                 <i className="fas fa-users"></i>
               </div>
               <h4 className="font-heading text-3xl font-bold text-dark mb-1">10+</h4>
-              <p className="text-sm font-medium text-zinc-500">Custom Projects</p>
+              <p className="text-xs md:text-sm font-medium text-zinc-500">Custom Projects</p>
             </motion.div>
             
-            <motion.div variants={cardVariants} className="bg-white p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
+            <motion.div variants={cardVariants} className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4">
-                <i className="fas fa-headset"></i>
+                {/* Updated Icon for Experience */}
+                <i className="fas fa-laptop-code"></i>
               </div>
               <h4 className="font-heading text-3xl font-bold text-dark mb-1">3+</h4>
-              <p className="text-sm font-medium text-zinc-500">Years Experience</p>
+              <p className="text-xs md:text-sm font-medium text-zinc-500">Years Experience</p>
             </motion.div>
             
-            <motion.div variants={cardVariants} className="bg-white p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
+            <motion.div variants={cardVariants} className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
               <div className="w-12 h-12 bg-amber-50 text-amber-500 rounded-xl flex items-center justify-center text-xl mb-4">
                 <i className="fas fa-bolt"></i>
               </div>
-              <h4 className="font-heading text-3xl font-bold text-dark mb-1">Seamless</h4>
-              <p className="text-sm font-medium text-zinc-500">UI/UX Integration</p>
+              {/* Added responsive text sizing (text-2xl to text-3xl) */}
+              <h4 className="font-heading text-2xl md:text-3xl font-bold text-dark mb-1 truncate">Seamless</h4>
+              <p className="text-xs md:text-sm font-medium text-zinc-500">UI/UX Integration</p>
             </motion.div>
             
-            <motion.div variants={cardVariants} className="bg-white p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
+            <motion.div variants={cardVariants} className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
               <div className="w-12 h-12 bg-rose-50 text-rose-500 rounded-xl flex items-center justify-center text-xl mb-4">
                 <i className="fas fa-star"></i>
               </div>
-              <h4 className="font-heading text-3xl font-bold text-dark mb-1">Robust</h4>
-              <p className="text-sm font-medium text-zinc-500">Backend Infrastructure</p>
+              {/* Added responsive text sizing (text-2xl to text-3xl) */}
+              <h4 className="font-heading text-2xl md:text-3xl font-bold text-dark mb-1">Robust</h4>
+              <p className="text-xs md:text-sm font-medium text-zinc-500">Backend System</p>
             </motion.div>
           </motion.div>
           
