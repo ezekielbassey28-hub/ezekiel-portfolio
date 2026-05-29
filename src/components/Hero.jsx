@@ -37,7 +37,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-zinc-400 mb-8 max-w-lg leading-relaxed"
           >
-            I build secure, scalable web applications and premium interfaces that transform complex ideas into seamless user experiences.
+            I build secure, custom web applications and high-performance interfaces from the ground up, delivering end-to-end solutions designed to solve your specific business problems.
           </motion.p>
 
           <motion.div 
