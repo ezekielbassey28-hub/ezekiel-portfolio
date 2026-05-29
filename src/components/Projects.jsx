@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 // Import your local project images
 import tamsakiImage from '../assets/tamsaki-project.jpg';
-import westportImage from '../assets/westportng_project.jpg';
+import westportImage from '../assets/westportng_project.JPG';
 
 const staggerContainer = {
   hidden: { opacity: 0 },
