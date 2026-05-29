@@ -1,97 +1,91 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Hero = () => {
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 }
+  }
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { type: "spring", bounce: 0.4 } }
+};
+
+const About = () => {
   return (
-    <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-zinc-900">
-      <div className="absolute inset-0 bg-[radial-gradient(#3f3f46_1px,transparent_1px)] [background-size:64px_64px] opacity-15 z-0"></div>
-      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary filter blur-[100px] opacity-40 z-0"></div>
-      <div className="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-rose-600 filter blur-[100px] opacity-30 z-0"></div>
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-        
-        {/* LEFT COLUMN - TEXT */}
-        <div>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-orange-300 font-semibold text-xs mb-6 tracking-wide uppercase backdrop-blur-sm"
-          >
-            System Status: Online & Ready
-          </motion.div>
-
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-heading text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight"
-          >
-            Architecting <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-400">Digital Solutions</span>
-          </motion.h1>
-
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-zinc-400 mb-8 max-w-lg leading-relaxed"
-          >
-            I build secure, scalable web applications and premium interfaces that transform complex ideas into seamless user experiences.
-          </motion.p>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4"
-          >
-            <a href="mailto:ezekielbassey28@gmail.com" className="px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primaryHover transition-all text-center shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
-              <i className="fas fa-envelope"></i> Email
-            </a>
-            <a href="https://wa.me/+2349066789052" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:border-white/30 hover:bg-white/10 transition-all text-center backdrop-blur-sm flex items-center justify-center gap-2">
-              <i className="fab fa-whatsapp text-green-400"></i> WhatsApp
-            </a>
-          </motion.div>
-        </div>
-        
-        {/* RIGHT COLUMN - CODE GRAPHIC */}
-        <motion.div 
-          initial={{ opacity: 0, x: 50, scale: 0.9 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.4 }}
-          className="hidden lg:block relative h-[500px] w-full rounded-3xl bg-[#0d1117] border border-white/10 overflow-hidden shadow-2xl shadow-black/50 animate-float"
-        >
-          <div className="absolute top-0 left-0 right-0 h-12 bg-white/5 border-b border-white/10 flex items-center px-4 space-x-2 backdrop-blur-md">
-            <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-            <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-            <div className="mx-auto text-xs text-zinc-500 font-mono">system_init.js</div>
-          </div>
+    <section id="about" className="py-24 bg-light border-y border-zinc-200/50 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-          <div className="p-8 pt-16 font-mono text-sm leading-relaxed text-zinc-300">
-            <p><span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> = {'{'}</p>
-            <p className="ml-4">name: <span className="text-green-400">'Ezekiel Bassey'</span>,</p>
-            <p className="ml-4">role: <span className="text-green-400">'Full-Stack Engineer'</span>,</p>
-            <p className="ml-4">stack: [<span className="text-green-400">'React'</span>, <span className="text-green-400">'Node.js'</span>, <span className="text-green-400">'Tailwind'</span>],</p>
-            <p className="ml-4">status: <span className="text-amber-400">true</span></p>
-            <p>{'};'}</p>
-            <br />
-            <p><span className="text-purple-400">function</span> <span className="text-blue-400">buildProject</span>(<span className="text-orange-400">idea</span>) {'{'}</p>
-            <p className="ml-4"><span className="text-purple-400">return</span> idea.<span className="text-blue-400">compile</span>().<span className="text-blue-400">deploy</span>();</p>
-            <p>{'}'}</p>
-            <p className="mt-4"><span className="text-primary font-bold animate-pulse">_</span></p>
-          </div>
-
-          <div className="absolute bottom-6 right-6 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg flex items-center gap-3 z-10">
-            <i className="fab fa-react text-cyan-400 text-xl"></i>
-            <i className="fab fa-js text-yellow-400 text-xl"></i>
-            <i className="fab fa-node-js text-green-500 text-xl"></i>
-          </div>
-        </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <h4 className="text-primary font-bold tracking-wide uppercase text-sm mb-2">About Me</h4>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">
+              Your Dedicated <span className="whitespace-nowrap">Full-Stack</span> Developer
+            </h2>
+            <p className="text-zinc-600 mb-6 leading-relaxed">
+              I am <span className="font-bold text-dark">Ezekiel Bassey</span>, a passionate full-stack web developer dedicated to creating exceptional digital experiences. With a focus on building secure, custom architecture from the ground up, I understand what it takes to build a successful online presence.
+            </p>
+            <p className="text-zinc-600 mb-8 leading-relaxed">
+              My approach combines robust engineering, strategic thinking, and modern technology to deliver solutions that not only look beautiful but also drive measurable results for your business.
+            </p>
+            
+            <a href="#contact" className="inline-flex items-center text-primary font-semibold hover:text-primaryHover transition-colors">
+              Learn more about my process <i className="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </motion.div>
+          
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-2 gap-4"
+          >
+            <motion.div variants={cardVariants} className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                <i className="fas fa-users"></i>
+              </div>
+              <h4 className="font-heading text-3xl font-bold text-dark mb-1">10+</h4>
+              <p className="text-xs md:text-sm font-medium text-zinc-500">Custom Projects</p>
+            </motion.div>
+            
+            <motion.div variants={cardVariants} className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                <i className="fas fa-laptop-code"></i>
+              </div>
+              <h4 className="font-heading text-3xl font-bold text-dark mb-1">3+</h4>
+              <p className="text-xs md:text-sm font-medium text-zinc-500">Years Experience</p>
+            </motion.div>
+            
+            <motion.div variants={cardVariants} className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
+              <div className="w-12 h-12 bg-amber-50 text-amber-500 rounded-xl flex items-center justify-center text-xl mb-4">
+                <i className="fas fa-bolt"></i>
+              </div>
+              <h4 className="font-heading text-2xl md:text-3xl font-bold text-dark mb-1 truncate">Fluid</h4>
+              <p className="text-xs md:text-sm font-medium text-zinc-500">UI/UX Integration</p>
+            </motion.div>
+            
+            <motion.div variants={cardVariants} className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-center">
+              <div className="w-12 h-12 bg-rose-50 text-rose-500 rounded-xl flex items-center justify-center text-xl mb-4">
+                <i className="fas fa-star"></i>
+              </div>
+              <h4 className="font-heading text-2xl md:text-3xl font-bold text-dark mb-1">Robust</h4>
+              <p className="text-xs md:text-sm font-medium text-zinc-500">Backend System</p>
+            </motion.div>
+          </motion.div>
+          
+        </div>
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default About;
