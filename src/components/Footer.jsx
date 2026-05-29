@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
           <div className="col-span-2 md:col-span-1">
             <a href="#home" className="text-2xl font-heading font-extrabold text-white tracking-tight block mb-4">
-              Portfolio<span className="text-primary">.</span>
+              EB<span className="text-primary">.</span>
             </a>
             <p className="text-sm leading-relaxed mb-6">
               Creating exceptional digital experiences that drive results and elevate brands globally.
