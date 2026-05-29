@@ -71,7 +71,7 @@ const Hero = () => {
           
           <div className="p-8 pt-16 font-mono text-sm leading-relaxed text-zinc-300">
             <p><span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> = {'{'}</p>
-            <p className="ml-4">name: <span className="text-green-400">'Your Name'</span>,</p>
+            <p className="ml-4">name: <span className="text-green-400">'Ezekiel Bassey'</span>,</p>
             <p className="ml-4">role: <span className="text-green-400">'Full-Stack Engineer'</span>,</p>
             <p className="ml-4">stack: [<span className="text-green-400">'React'</span>, <span className="text-green-400">'Node.js'</span>, <span className="text-green-400">'Tailwind'</span>],</p>
             <p className="ml-4">status: <span className="text-amber-400">true</span></p>
