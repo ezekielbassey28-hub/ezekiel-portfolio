@@ -27,13 +27,11 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <h4 className="text-primary font-bold tracking-wide uppercase text-sm mb-2">About Me</h4>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">Your Dedicated Web Developer</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">Your Dedicated Full-Stack Developer</h2>
             <p className="text-zinc-600 mb-6 leading-relaxed">
-              I am a passionate web designer and developer dedicated to creating exceptional digital experiences. With years of experience across various industries, I understand what it takes to build a successful online presence from the ground up.
-            </p>
+             I am Ezekiel Bassey, a passionate full-stack web developer dedicated to creating exceptional digital experiences. With a focus on building secure, custom architecture from the ground up, I understand what it takes to build a successful online presence.            </p>
             <p className="text-zinc-600 mb-8 leading-relaxed">
-              My approach combines creativity, strategic thinking, and cutting-edge technology to deliver solutions that not only look beautiful but also drive measurable results for your business.
-            </p>
+             My approach combines robust engineering, strategic thinking, and modern technology to deliver solutions that not only look beautiful but also drive measurable results for your business.            </p>
             
             <a href="#contact" className="inline-flex items-center text-primary font-semibold hover:text-primaryHover transition-colors">
               Learn more about my process <i className="fas fa-arrow-right ml-2 text-sm"></i>
