@@ -31,11 +31,9 @@ const About = () => {
               Your Dedicated <span className="whitespace-nowrap">Full-Stack</span> Developer
             </h2>
             <p className="text-zinc-600 mb-6 leading-relaxed">
-              I am <span className="font-bold text-dark">Ezekiel Bassey</span>, a passionate full-stack web developer dedicated to creating exceptional digital experiences. With a focus on building secure, custom architecture from the ground up, I understand what it takes to build a successful online presence.
-            </p>
+              I am <span className="font-bold text-dark">Ezekiel Bassey</span>, a passionate full-stack web developer dedicated to building websites that are fast, secure, and built to last. With a focus on building secure, custom architecture from the ground up, I understand what it takes to build a successful online presence.</p>
             <p className="text-zinc-600 mb-8 leading-relaxed">
-              My approach combines robust engineering, strategic thinking, and modern technology to deliver solutions that not only look beautiful but also drive measurable results for your business.
-            </p>
+              My approach combines robust engineering, strategic thinking, and modern technology to deliver solutions that not only look beautiful but also drive real impact for your business.</p>
             
             <a href="#contact" className="inline-flex items-center text-primary font-semibold hover:text-primaryHover transition-colors">
               Learn more about my process <i className="fas fa-arrow-right ml-2 text-sm"></i>
