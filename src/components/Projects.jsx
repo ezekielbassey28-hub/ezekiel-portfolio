@@ -33,7 +33,7 @@ const Projects = () => {
             className="text-center mb-12"
           >
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-dark mb-3">Powered by Modern Technology</h2>
-            <p className="text-zinc-500">I utilize the latest frameworks to build scalable, secure, and future-proof solutions and more.</p>
+            <p className="text-zinc-500">I utilize a modern tech stack to engineer scalable, secure, and future-proof digital solutions.</p>
           </motion.div>
           
           <motion.div 
